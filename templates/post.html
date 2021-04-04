@@ -1,0 +1,21 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+<table>
+        <tr>
+            <td>
+                {{ post.title }}
+            </td>
+            <td>
+                {{ post.created|date:'d M Y H:i' }}
+            </td>
+            <td>
+                {{ post.text }}
+            </td>
+        </tr>
+</table>
+{% endblock content %}

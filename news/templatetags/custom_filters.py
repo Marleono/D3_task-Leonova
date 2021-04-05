@@ -8,8 +8,7 @@ STOP_LIST = [
 ]
 @register.filter(name='rude')
 def clean_text(value):
-    list = value.split()
-    for word in list:
+    for word in value.split():
         if word in STOP_LIST:
-            list.replace(word, '*')
-    return list.join()
+            value.replace(word,'***')
+    return value
